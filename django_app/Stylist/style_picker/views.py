@@ -44,6 +44,9 @@ def initialize_form_data():
         'class' : 'tydget'})
     tydget.append({'obj' : TydgetField('width', 'Width', 'text', '300px'),
         'class': 'tydget'})
+        
+    tydget.append({'obj' : TydgetField('body-color', 'Inner Body Color', 'color', '#000000'),
+        'class' : 'tydget-body'})        
     
     return tydget
 
