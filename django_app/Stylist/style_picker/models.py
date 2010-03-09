@@ -26,13 +26,17 @@ class TydgetField(models.Model):
     label = models.CharField(max_length=30)
     input_type = models.CharField(max_length=10)
     value = models.CharField(max_length=100)
+    class_name = models.CharField(max_length=30)
     
-    def __init__(self, input_id, input_label, input_type, value):
-        self.input_id = input_id
-        self.label = input_label
-        self.input_type = input_type
-        self.value = value
+    def __init__(self, obj):
+#        input_id, input_label, input_type, value, class_name):
+        self.input_id = obj['input_id']
+        self.label = obj['label']
+        self.input_type = obj['type']
+        self.value = obj['value']
+        self.class_name = obj['css_class_name']
         self.quick_render = self.render()
+        
         
     def render(self):
         if (self.input_type == 'color'):

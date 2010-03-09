@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.template import Context, loader
 from django.shortcuts import render_to_response
 
+import simplejson, urllib
 from Stylist.style_picker.models import ColorPickerWidget, TydgetField, TextFieldWidget
 
 
@@ -36,18 +37,26 @@ def index(request):
     
 
 def initialize_form_data():
-    tydget = [  ]
-    # First, make the outer div elements (class="tydget")
-    tydget.append({'obj' : TydgetField('color', 'Text Color', 'color', '#000000'),
-        'class' : 'tydget'})
-    tydget.append({'obj' : TydgetField('background', 'Background Color', 'color', '#999999'),
-        'class' : 'tydget'})
-    tydget.append({'obj' : TydgetField('width', 'Width', 'text', '300px'),
-        'class': 'tydget'})
-        
-    tydget.append({'obj' : TydgetField('body-color', 'Inner Body Color', 'color', '#000000'),
-        'class' : 'tydget-body'})        
     
-    return tydget
+    tydget_list = load_from_file()
+    
+    return tydget_list
+    
 
 
+def load_from_file():
+    url = 'http://localhost/sample.json'
+    result = simplejson.load(urllib.urlopen(url))
+    
+    tydget = [ ] 
+
+    for t in result['entries']:
+        obj = t['obj']
+        tydget.append({'obj' : TydgetField(t['obj']), 
+            'class': t['section'],
+            'can_customize': t['can_customize'] })
+
+
+    return tydget    
+    
+    

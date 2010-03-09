@@ -1,0 +1,38 @@
+{
+    "entries" : [
+    {
+        "obj" : {
+            "input_id" : "background-color",
+            "label" : "Background Color",
+            "type" : "color",
+            "value" : "#ACF1FF",
+            "css_class_name" : "background"
+        },
+        "section" : "tydget",
+        "can_customize" : 1
+    },
+    {
+        "obj" : {
+            "input_id" : "font_family", 
+            "label": "Font",
+            "type" : "text",
+            "value" : "\"Helvetica Neue\", Arial, Verdana",
+            "css_class_name": "font-family"
+        },
+        "section" : "tydget",
+        "can_customize" : 0
+        
+    },
+    {
+        "obj" : {
+            "input_id" : "width",
+            "label" : "Width",
+            "type" : "text",
+            "value" : "300px",
+            "css_class_name" : "width"
+        },
+        "section" : "tydget",
+        "can_customize" : 1
+        
+    }]
+}
