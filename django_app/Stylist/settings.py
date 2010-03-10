@@ -70,8 +70,8 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 
-   # '/Users/npodrazik/Documents/100-DAYS/Stylist/django_frontend',
-   '/Users/natalie/Development/100-DAYS/Stylist/django_frontend',
+    '/Users/npodrazik/Documents/100-DAYS/Stylist/django_frontend',
+#   '/Users/natalie/Development/100-DAYS/Stylist/django_frontend',
 )
 
 INSTALLED_APPS = (

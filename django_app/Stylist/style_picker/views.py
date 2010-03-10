@@ -45,18 +45,27 @@ def initialize_form_data():
 
 
 def load_from_file():
-    url = 'http://localhost/sample.json'
+    url = 'http://localhost/vanilla.json'
     result = simplejson.load(urllib.urlopen(url))
     
     tydget = [ ] 
 
-    for t in result['entries']:
-        obj = t['obj']
-        tydget.append({'obj' : TydgetField(t['obj']), 
-            'class': t['section'],
-            'can_customize': t['can_customize'] })
+#    for t in result['entries']:
+#        tydget.append({'obj' : TydgetField(t['obj']), 
+#            'class': t['section'],
+#            'can_customize': t['can_customize'] })
 
-
+    keys = result.keys()
+    i = 0
+    j = 0
+    for key in keys:
+        # key is an array.
+        class_tuple = result[key]
+        for obj in class_tuple:
+            tydget.append({'obj': TydgetField(obj, key),
+            'class': key,
+            'can_customize': obj['can_customize']})
+ 
     return tydget    
     
     

@@ -86,15 +86,17 @@
                 
                 {% for field in class.list %}
                 	{% if field.can_customize %}
+					<div class="visible">
     				<label for="{{ field.obj.input_id }}">{{ field.obj.label }}</label>
                     {{ field.obj.quick_render }}
+                    </div>
 					{% else %}
 					<div class="hidden">
     				<label for="{{ field.obj.input_id }}">{{ field.obj.label }}</label>
                     {{ field.obj.quick_render }}
 					</div>
-                    <br /><br />
 					{% endif %}
+                    <br /><br />
 
                 {% endfor %}
             {% endfor %}
@@ -119,7 +121,7 @@
         {% endcomment %}
             <textarea id="results" name="results" rows="20" cols="55">{% regroup field_list by class as fields_by_class %}{% for class in fields_by_class %}
 .{{ class.grouper }}{ {% for field in class.list %}
-    {{field.obj.class_name}}: {{ field.obj.value }};{% endfor %}
+    {{field.obj.element}}: {{ field.obj.value }};{% endfor %}
 }
 {% endfor %}
 </textarea>

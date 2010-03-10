@@ -28,13 +28,14 @@ class TydgetField(models.Model):
     value = models.CharField(max_length=100)
     class_name = models.CharField(max_length=30)
     
-    def __init__(self, obj):
+    def __init__(self, obj, class_name):
 #        input_id, input_label, input_type, value, class_name):
-        self.input_id = obj['input_id']
+        self.input_id = class_name + '-' + obj['id']
+        self.element = obj['id']
         self.label = obj['label']
         self.input_type = obj['type']
         self.value = obj['value']
-        self.class_name = obj['css_class_name']
+        self.class_name = class_name
         self.quick_render = self.render()
         
         
