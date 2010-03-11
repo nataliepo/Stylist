@@ -35,11 +35,18 @@ class TydgetField(models.Model):
         self.label = obj['label']
         self.input_type = obj['type']
         self.value = obj['value']
-        self.class_name = class_name
+        self.sub_class = obj['sub_class']
+
+        self.class_name = obj['sub_class'] + "." + class_name
+        
         if (obj['important']):
             self.important = 1
         else:
             self.important = 0
+            
+            
+        if obj['sub_class']:
+            self.input_id += '-' + obj['sub_class']    
             
         self.quick_render = self.render()
         
@@ -55,7 +62,4 @@ class TydgetField(models.Model):
         else:
             txt_widget = TextFieldWidget()
             return txt_widget.render(self.input_id, self.value)
-
-
-
-        
+            

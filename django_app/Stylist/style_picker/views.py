@@ -62,10 +62,14 @@ def load_from_file():
         # key is an array.
         class_tuple = result[key]
         for obj in class_tuple:
+            class_name = "." + key
+            if (obj['sub_class']):
+                class_name = obj['sub_class'] + class_name
+                
             tydget.append({'obj': TydgetField(obj, key),
-            'class': key,
+#            'class': key,
+            'class': class_name,
             'can_customize': obj['can_customize']})
  
     return tydget    
-    
     
