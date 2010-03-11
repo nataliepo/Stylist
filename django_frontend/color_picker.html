@@ -90,13 +90,10 @@
     				<label for="{{ field.obj.input_id }}">{{ field.obj.label }}</label>
                     {{ field.obj.quick_render }}
                     </div>
-					{% else %}
-					<div class="hidden">
-    				<label for="{{ field.obj.input_id }}">{{ field.obj.label }}</label>
-                    {{ field.obj.quick_render }}
-					</div>
-					{% endif %}
                     <br /><br />
+					{% else %}
+					<input type="hidden" name="{{field.obj.input_id}}" id="{{field.obj.input_id}}" value="{{field.obj.value}}" />
+					{% endif %}
 
                 {% endfor %}
             {% endfor %}

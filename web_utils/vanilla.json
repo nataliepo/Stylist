@@ -2,7 +2,7 @@
     "tydget": [
     {
         "id": "font-family",
-        "label": "Font",
+        "label": "Main Widget Font",
         "type": "text",
         "value": "\"Helvetica Neue\", Arial, Verdana",
         "can_customize": 1,
@@ -29,7 +29,7 @@
         "label": "Font Size",
         "type": "text",
         "value": "13px",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     }],
     "tydget a" : [
@@ -46,7 +46,7 @@
         "label": "Link Text Decoration",
         "type": "text",
         "value": "none",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     },    
     {
@@ -54,7 +54,7 @@
         "label": "Link Font Weight",
         "type": "text",
         "value": "300",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     }],
     "tydget-event_footer_div" : [ 
@@ -63,7 +63,7 @@
         "value": "right",
         "type": "text",
         "label": "Float value",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     }],
     "tydget-header-precursor" : [
@@ -72,7 +72,7 @@
         "value": "11px",
         "type": "text",
         "label": "Upper Header Font Size",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     },
     {
@@ -114,7 +114,7 @@
         "value": "left",
         "type": "text",
         "label": "Avatar Float value",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     },         
     {
@@ -122,33 +122,16 @@
         "value": "15px",
         "type": "text",
         "label": "Avatar Right Margin",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
-    }],
-    "tydget-avatar-wrapper" : [
-    {
-        "id": "float",
-        "value": "left",
-        "type": "text",
-        "label": "Avatar Float value",
-        "can_customize": 1,
-        "important": 0
-    },         
-    {
-        "id": "margin-right",
-        "value": "15px",
-        "type": "text",
-        "label": "Avatar Right Margin",
-        "can_customize": 1,
-        "important": 0
-    }],       
+    }],    
     "tydget-thumbnail" : [
     {
         "id": "border",
         "value": "1px solid #ccc",
         "type": "text",
         "label": "Thumbnail Border",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     }],
     "tydget-event" : [
@@ -157,7 +140,7 @@
         "value": "hidden",
         "type": "text",
         "label": "Event Overflow",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     },         
     {
@@ -165,7 +148,7 @@
         "value": "25px 15px",
         "type": "text",
         "label": "Event Margins",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     }],    
     "tydget-event_footer_div" : [
@@ -174,7 +157,7 @@
         "value": "right",
         "type": "text",
         "label": "Footer Float Value",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     }],
     "tydget-comment-div" : [
@@ -183,7 +166,7 @@
         "value": "left",
         "type": "text",
         "label": "Comment section float value",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     },         
     {
@@ -191,7 +174,7 @@
         "value": "3px 5px",
         "type": "text",
         "label": "Comment section margins",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     }],    
     "tydget-fav-div" : [
@@ -200,7 +183,7 @@
         "value": "left",
         "type": "text",
         "label": "Favorite section float value",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     },         
     {
@@ -208,7 +191,7 @@
         "value": "3px 5px",
         "type": "text",
         "label": "Favorite section margins",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 0
     }],
     "tydget-fav-div a" : [
@@ -217,7 +200,7 @@
         "value": "bold",
         "type": "text",
         "label": "Favorite Font Style",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 1
     },         
     {
@@ -234,7 +217,7 @@
         "value": "bold",
         "type": "text",
         "label": "Comment Font Style",
-        "can_customize": 1,
+        "can_customize": 0,
         "important": 1
     },         
     {
