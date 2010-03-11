@@ -5,7 +5,7 @@ Make sure the django_app/Stylist/settings.py TEMPLATE_DIRS value references the 
 
 # Usage
 First, take a json feed (example in web_utils/sample.json) of defined elements and place it in your localhost folder. Make sure you can view it here:
- 	http://localhost/sample.json
+ 	http://localhost/vanilla.json
 
 Then, start up the django webserver:
 
@@ -18,7 +18,8 @@ View it in your browser - http://127.0.0.1:8000/ by default.
 
 Change the color or text elements and click 'Submit' to generate css.  The elements that you see on the form have the can_customize values set to 1; all other values are defaults.
 
+
 # To Do
-* condense json format
-* test with examples
-* consider compound field values (background color OR image url)
+* add url picker to auto-insert the js scripts
+* add in a preview
+*  

@@ -11,8 +11,10 @@ def index(request):
     submitted = 0
     cp_widget = ColorPickerWidget()
     
-    tydget_list = initialize_form_data()
+    tydget_list = load_styles_from_file()
     css_results = ""
+#    site_list = load_sites_from_file()
+#    chosen_site = ""
     
     # update the fields if this is a POST.
     if request.method == 'POST':
@@ -23,6 +25,8 @@ def index(request):
         for t in tydget_list:
             t['obj'].value = form[t['obj'].input_id]
             t['obj'].quick_render = t['obj'].render()
+            
+#        chosen_site = form['motion-choice']
     
     
     return render_to_response('color_picker.html', {
@@ -33,31 +37,18 @@ def index(request):
                 
         'submitted': submitted,
         'css_results': css_results,
+#        'site_list': site_list,
+#        'chosen_site': chosen_site,
     })
-    
 
-def initialize_form_data():
-    
-    tydget_list = load_from_file()
-    
-    return tydget_list
-    
-
-
-def load_from_file():
+def load_styles_from_file():
     url = 'http://localhost/vanilla.json'
     result = simplejson.load(urllib.urlopen(url))
     
     tydget = [ ] 
 
-#    for t in result['entries']:
-#        tydget.append({'obj' : TydgetField(t['obj']), 
-#            'class': t['section'],
-#            'can_customize': t['can_customize'] })
-
     keys = result.keys()
-    i = 0
-    j = 0
+
     for key in keys:
         # key is an array.
         class_tuple = result[key]
@@ -72,4 +63,17 @@ def load_from_file():
             'can_customize': obj['can_customize']})
  
     return tydget    
+    
+def load_sites_from_file ():
+    url = 'http://localhost/sites.json'
+
+    site_list = { }
+    result = simplejson.load(urllib.urlopen(url))
+    
+#    for site in result['sites']:
+#        site_list.append({'xid': site['xid'], 'name': site['name']})
+    for site in result['sites']:
+        site_list[site['xid']] = site['name']
+        
+    return site_list
     

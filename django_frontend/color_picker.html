@@ -28,7 +28,13 @@
     p.legend { margin-bottom: 1em; }
     p.legend em { color: #C00; font-style: normal; }
 
-    div.form-container div.controlset {display: block; float:left; width: 100%; padding: 0.25em 0;}
+    div.form-container div.controlset {
+		display: block; 
+		float:left; 
+		width: 500px; 
+		padding: 0.25em 0; 
+		border:1px solid #ccc;
+	}
 
     div.form-container div.controlset label, 
     div.form-container div.controlset input,
@@ -44,6 +50,14 @@
 	div.hidden {
 		display: none !important;
 	}
+	
+	div.motion-options{
+        border:1px solid #ccc;
+		float: left;
+		margin: 0px 15px;
+		padding: 5px 5px;
+	}
+
     </style>
     
 
@@ -56,24 +70,7 @@
 
 <body>
     <h2>Let's make something pretty.</h2>
-    <!--     
- 
-    <div class="form-container">
-    <form action="#" method="post">
-    		<fieldset>
-    			<div class="controlset"><label for="color1">Color 1</label> <input id="color1" type="text" name="color1" value="#333399" /></div>
-    			<div class="controlset"><label for="color2">Color 2</label> <input id="color2" type="text" name="color2" value="#FF0000" /></div>
-    			<div class="controlset"><label for="color3">Color 3</label> <input id="color3" type="text" name="color3" value="#99cc00" /></div>
 
-    		</fieldset>
-
-    	</form>
-    </div>
-   
-    <br />
-
-    <h2> Now, with the django objects.</h2>
- -->    
     <div class="form-container">
     <form action="" method="post">
         <div class="controlset">  
@@ -100,7 +97,46 @@
             
         <br />
         </div>
+		
+		
+		{% comment %}
+		 attempting to make a preview box
+		{% endcomment %}
+		
+		
+		<div class="motion-options">			
+		{% comment %}
+		spit out the css
+		{% endcomment %}
+		<style type="text/css">
+		{% regroup field_list by class as fields_by_class %}
+		{% for class in fields_by_class %}
+		{{ class.grouper }}{ {% for field in class.list %}
+			{{field.obj.element}}: {{ field.obj.value }}{%if field.obj.important%} !important{%endif%};{% endfor %}
+		}
+		{% endfor %}
+		</style>
+		
+		<div id="tydget"></div>
+	    <script type="text/javascript" src="http://localhost/javascript_solution/typepad_parsing.js"></script> 
+	    <script type="text/javascript" src="http://api.typepad.com/groups/6p0120a6255c8c970b/events.js?max-results=5&start-index=1&callback=event_callback"></script>
+	 
+		</div>
+		{% comment %}
+		<h1>NATALIE, LEFT OFF HERE.</h1>
+		<div class="motion-options">
+			<label>Motion Group Choice</label>
+			<select id="motion-choice" name="motion-choice">
+				{% for key, value in site_list.items %}
+				<option value="{{key}}">
+					{{value}}
+				</option>
+				{% endfor %}
+			</select>
+		</div>
+		{% endcomment %}
         
+		<div style="clear: both;" />
         <input type="submit" value="Submit" />
     </form>
     </div>
@@ -108,6 +144,7 @@
     {% if submitted %}
     <br />
         <h2> Style Results </h2>
+
         <p>Copy and paste the following snippet of code into your website. Have fun!</p>
 
         <div class="results-area">
