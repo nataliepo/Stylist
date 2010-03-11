@@ -21,5 +21,4 @@ Change the color or text elements and click 'Submit' to generate css.  The eleme
 
 # To Do
 * add url picker to auto-insert the js scripts
-* add in a preview
-*  
+* debug preview (all links are blue, header color isnt working)
