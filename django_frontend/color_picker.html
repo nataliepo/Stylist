@@ -121,7 +121,7 @@
         {% endcomment %}
             <textarea id="results" name="results" rows="20" cols="55">{% regroup field_list by class as fields_by_class %}{% for class in fields_by_class %}
 .{{ class.grouper }}{ {% for field in class.list %}
-    {{field.obj.element}}: {{ field.obj.value }};{% endfor %}
+    {{field.obj.element}}: {{ field.obj.value }}{%if field.obj.important%} !important{%endif%};{% endfor %}
 }
 {% endfor %}
 </textarea>

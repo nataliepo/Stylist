@@ -36,6 +36,11 @@ class TydgetField(models.Model):
         self.input_type = obj['type']
         self.value = obj['value']
         self.class_name = class_name
+        if (obj['important']):
+            self.important = 1
+        else:
+            self.important = 0
+            
         self.quick_render = self.render()
         
         
