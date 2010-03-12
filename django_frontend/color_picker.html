@@ -6,6 +6,8 @@
 <head>
 <title>Stylist</title>
 
+<meta name="http-equiv" content="Content-type: text/html; charset=UTF-8"/>
+
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
     
@@ -109,12 +111,7 @@
 		spit out the css
 		{% endcomment %}
 		<style type="text/css">
-		{% regroup field_list by class as fields_by_class %}
-		{% for class in fields_by_class %}
-		{{ class.grouper }}{ {% for field in class.list %}
-			{{field.obj.element}}: {{ field.obj.value }}{%if field.obj.important%} !important{%endif%};{% endfor %}
-		}
-		{% endfor %}
+		 	{{ resulting_css }}
 		</style>
 		
 		<div id="tydget"></div>
@@ -148,17 +145,7 @@
         <p>Copy and paste the following snippet of code into your website. Have fun!</p>
 
         <div class="results-area">
-        {% comment %}
-            .tydget{{%for field in field_list %}
-                {{field.obj.input_id}}: {{ field.obj.value }};{% endfor %}
-            }
-        {% endcomment %}
-            <textarea id="results" name="results" rows="20" cols="55">{% regroup field_list by class as fields_by_class %}{% for class in fields_by_class %}
-{{ class.grouper }}{ {% for field in class.list %}
-    {{field.obj.element}}: {{ field.obj.value }}{%if field.obj.important%} !important{%endif%};{% endfor %}
-}
-{% endfor %}
-</textarea>
+            <textarea id="results" name="results" rows="20" cols="55">{{ resulting_css }}</textarea>
         </div>
     
     {% endif %}

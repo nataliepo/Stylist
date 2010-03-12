@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.template import Context, loader
 from django.shortcuts import render_to_response
+from django.template.loader import render_to_string
 
 import simplejson, urllib
 from Stylist.style_picker.models import ColorPickerWidget, TydgetField, TextFieldWidget
@@ -28,6 +29,7 @@ def index(request):
             
 #        chosen_site = form['motion-choice']
     
+    css_results = render_to_string('resulting_css.html', { 'field_list': tydget_list })
     
     return render_to_response('color_picker.html', {
         
@@ -36,7 +38,7 @@ def index(request):
         'field_list': tydget_list,
                 
         'submitted': submitted,
-        'css_results': css_results,
+        'resulting_css': css_results,
 #        'site_list': site_list,
 #        'chosen_site': chosen_site,
     })
@@ -52,14 +54,9 @@ def load_styles_from_file():
     for key in keys:
         # key is an array.
         class_tuple = result[key]
-        for obj in class_tuple:
-            class_name = "." + key
-            if (obj['sub_class']):
-                class_name = obj['sub_class'] + class_name
-                
+        for obj in class_tuple:              
             tydget.append({'obj': TydgetField(obj, key),
-#            'class': key,
-            'class': class_name,
+            'class': key,
             'can_customize': obj['can_customize']})
  
     return tydget    

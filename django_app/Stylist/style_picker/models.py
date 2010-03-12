@@ -1,6 +1,8 @@
 from django.db import models
-
+ 
 from style_picker.widgets import ColorPickerWidget, TextFieldWidget
+import re
+
 
 class ColorField(models.CharField):
     def __init__(self, *args, **kwargs):
@@ -22,32 +24,40 @@ class TextField(models.CharField):
         
  
 class TydgetField(models.Model):
-    input_id = models.CharField(max_length=30)
-    label = models.CharField(max_length=30)
-    input_type = models.CharField(max_length=10)
-    value = models.CharField(max_length=100)
-    class_name = models.CharField(max_length=30)
+#    input_id = models.CharField(max_length=30)
+#    label = models.CharField(max_length=30)
+#    input_type = models.CharField(max_length=10)
+#    value = models.CharField(max_length=100)
+#    class_name = models.CharField(max_length=30)
     
-    def __init__(self, obj, class_name):
-#        input_id, input_label, input_type, value, class_name):
-        self.input_id = class_name + '-' + obj['id']
+    def __init__(self, obj, key):
+#        self.input_id = class_name + '-' + obj['id']
+        self.input_id = key + obj['id']
+        
+        # scrub spaces and non-allowed chars.
+  #      self.input_id = self.input_id.replace(" ", "__space__")
+  #      self.input_id = self.input_id.replace("#", "__pound__")
+  #      self.input_id = self.input_id.replace(".", "__dot__")
+        self.input_id = re.sub(" ", "__sp__", self.input_id)
+        self.input_id = re.sub("#", "__pd__", self.input_id)
+        self.input_id = re.sub("\.", "__dt__", self.input_id)
+        self.input_id = re.sub(",", "__cma__", self.input_id)
+        
+        
         self.element = obj['id']
         self.label = obj['label']
         self.input_type = obj['type']
         self.value = obj['value']
-        self.sub_class = obj['sub_class']
 
-        self.class_name = obj['sub_class'] + "." + class_name
+
+        
         
         if (obj['important']):
             self.important = 1
         else:
             self.important = 0
             
-            
-        if obj['sub_class']:
-            self.input_id += '-' + obj['sub_class']    
-            
+                   
         self.quick_render = self.render()
         
         

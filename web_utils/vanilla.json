@@ -1,7 +1,6 @@
 {
-    "tydget": [
+    "#tydget": [
     {
-        "sub_class" : "",
         "id": "font-family",
         "label": "Main Widget Font",
         "type": "text",
@@ -10,16 +9,14 @@
         "important": 0
     },
     {
-        "sub_class" : "",
         "id": "color",
-        "label": "Background Color",
+        "label": "Default Font Color",
         "type": "color",
         "value": "#888",
         "can_customize": 1,
         "important": 0
     },
     {
-        "sub_class" : "",
         "id": "width",
         "label": "Width",
         "type": "text",
@@ -28,16 +25,15 @@
         "important": 0
     },
     {
-        "sub_class" : "",
         "id": "font-size",
         "label": "Font Size",
         "type": "text",
         "value": "13px",
         "can_customize": 0,
         "important": 0
-    },
+    }],
+    "#tydget a": [
     {
-        "sub_class" : "a",
         "id": "color",
         "label": "Link Colors",
         "type": "color",
@@ -46,7 +42,6 @@
         "important": 0
     },
     {
-        "sub_class" : "a",
         "id": "text-decoration",
         "label": "Link Text Decoration",
         "type": "text",
@@ -55,7 +50,6 @@
         "important": 0
     },    
     {
-        "sub_class" : "a",
         "id": "font-weight",
         "label": "Link Font Weight",
         "type": "text",
@@ -63,9 +57,8 @@
         "can_customize": 0,
         "important": 0
     }],
-    "tydget-event_footer_div" : [ 
+    ".tydget-event_footer_div" : [ 
     {
-        "sub_class" : "",
         "id": "float",
         "value": "right",
         "type": "text",
@@ -73,9 +66,8 @@
         "can_customize": 0,
         "important": 0
     }],
-    "tydget-header-precursor" : [
+    ".tydget-header-precursor" : [
     {
-        "sub_class" : "",
         "id": "font-size",
         "value": "11px",
         "type": "text",
@@ -84,7 +76,6 @@
         "important": 0
     },
     {
-        "sub_class" : "",
         "id": "font-family",
         "value": "Garamond",
         "type": "text",
@@ -92,9 +83,8 @@
         "can_customize": 1,
         "important": 0
     } ],
-    "tydget-header-title" : [
+    ".tydget-header-title" : [
      {
-         "sub_class" : "",
          "id": "font-size",
          "value": "30px",
          "type": "text",
@@ -103,7 +93,6 @@
          "important" : 1
      },
      {
-         "sub_class" : "",
          "id": "font-family",
          "value": "Garamond",
          "type": "text",
@@ -112,17 +101,15 @@
          "important": 0
      },
      {
-         "sub_class" : "",
          "id": "color",
          "value": "#ccc",
          "type": "color",
          "label": "Header Font Color",
          "can_customize": 1,
-         "important": 0
+         "important": 1
      } ],
-     "tydget-avatar-wrapper" : [
+     ".tydget-avatar-wrapper" : [
      {
-         "sub_class" : "",
         "id": "float",
         "value": "left",
         "type": "text",
@@ -131,7 +118,6 @@
         "important": 0
     },         
     {
-        "sub_class" : "",
         "id": "margin-right",
         "value": "15px",
         "type": "text",
@@ -139,9 +125,8 @@
         "can_customize": 0,
         "important": 0
     }],    
-    "tydget-thumbnail" : [
+    ".tydget-thumbnail" : [
     {
-        "sub_class" : "",
         "id": "border",
         "value": "1px solid #ccc",
         "type": "text",
@@ -149,9 +134,8 @@
         "can_customize": 0,
         "important": 0
     }],
-    "tydget-event" : [
+    ".tydget-event" : [
     {
-        "sub_class" : "",
         "id": "overflow",
         "value": "hidden",
         "type": "text",
@@ -160,7 +144,6 @@
         "important": 0
     },         
     {
-        "sub_class" : "",
         "id": "margin",
         "value": "25px 15px",
         "type": "text",
@@ -168,19 +151,8 @@
         "can_customize": 0,
         "important": 0
     }],    
-    "tydget-event_footer_div" : [
+    ".tydget-comment-div" : [
     {
-        "sub_class" : "",
-        "id": "float",
-        "value": "right",
-        "type": "text",
-        "label": "Footer Float Value",
-        "can_customize": 0,
-        "important": 0
-    }],
-    "tydget-comment-div" : [
-    {
-        "sub_class" : "",
         "id": "float",
         "value": "left",
         "type": "text",
@@ -189,35 +161,15 @@
         "important": 0
     },         
     {
-        "sub_class" : "",
         "id": "margin",
         "value": "3px 5px",
         "type": "text",
         "label": "Comment section margins",
         "can_customize": 0,
         "important": 0
-    },
-    {
-        "sub_class" : "a",
-        "id": "font-weight",
-        "value": "bold",
-        "type": "text",
-        "label": "Comment Font Style",
-        "can_customize": 0,
-        "important": 1
-    },         
-    {
-        "sub_class" : "a",
-        "id": "color",
-        "value": "#aaa",
-        "type": "color",
-        "label": "Comment Font Color",
-        "can_customize": 1,
-        "important": 0
     }],
-    "tydget-fav-div" : [
+    ".tydget-fav-div" : [
     {
-        "sub_class" : "",
         "id": "float",
         "value": "left",
         "type": "text",
@@ -226,30 +178,28 @@
         "important": 0
     },         
     {
-        "sub_class" : "",
         "id": "margin",
         "value": "3px 5px",
         "type": "text",
         "label": "Favorite section margins",
         "can_customize": 0,
         "important": 0
-    },
+    }],
+    ".tydget-fav-div a, .tydget-comment-div a": [
     {
-        "sub_class" : "a",  
         "id": "font-weight",
         "value": "bold",
         "type": "text",
-        "label": "Favorite Font Style",
+        "label": "Comment and Favorite Font Style",
         "can_customize": 0,
         "important": 1
     },         
     {
-        "sub_class" : "a",  
         "id": "color",
         "value": "#aaa",
         "type": "color",
-        "label": "Favorite Font Color",
+        "label": "Comment and Favorite Font Color",
         "can_customize": 1,
-        "important": 0
+        "important": 1
     }]
 }

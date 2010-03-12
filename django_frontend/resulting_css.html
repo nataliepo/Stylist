@@ -1,0 +1,72 @@
+{% regroup field_list by class as fields_by_class %}
+{% for class in fields_by_class %}
+{{ class.grouper }}{ {% for field in class.list %}
+   {{field.obj.element}}: {{ field.obj.value }}{%if field.obj.important%} !important{%endif%};{% endfor %}
+}
+{% endfor %}
+
+
+{% comment %}
+
+.tydget-comment-div{ 
+   float: left;
+   margin: 3px 5px;
+}
+
+a.tydget-comment-div{ 
+   font-weight: bold !important;
+   color: #aaa;
+}
+
+.tydget-avatar-wrapper{ 
+   float: left;
+   margin-right: 15px;
+}
+
+.tydget-thumbnail{ 
+   border: 1px solid #ccc;
+}
+
+.tydget-header-title{ 
+   font-size: 30px !important;
+   font-family: Garamond;
+   color: #ccc;
+}
+
+.tydget-fav-div{ 
+   float: left;
+   margin: 3px 5px;
+}
+
+a.tydget-fav-div{ 
+   font-weight: bold !important;
+   color: #aaa;
+}
+
+.tydget-event_footer_div{ 
+   float: right;
+}
+
+.tydget{ 
+   font-family: "Helvetica Neue", Arial, Verdana;
+   color: #888;
+   width: 300px;
+   font-size: 13px;
+}
+
+#tydget a{ 
+   color: #666;
+   text-decoration: none;
+   font-weight: 300;
+}
+
+.tydget-header-precursor{ 
+   font-size: 11px;
+   font-family: Garamond;
+}
+
+.tydget-event{ 
+   overflow: hidden;
+   margin: 25px 15px;
+}
+{% endcomment %}
