@@ -14,8 +14,6 @@ def index(request):
     
     tydget_list = load_styles_from_file()
     css_results = ""
-#    site_list = load_sites_from_file()
-#    chosen_site = ""
     
     # update the fields if this is a POST.
     if request.method == 'POST':
@@ -52,6 +50,7 @@ def load_styles_from_file():
     keys = result.keys()
 
     for key in keys:
+        
         # key is an array.
         class_tuple = result[key]
         for obj in class_tuple:              
@@ -67,8 +66,6 @@ def load_sites_from_file ():
     site_list = { }
     result = simplejson.load(urllib.urlopen(url))
     
-#    for site in result['sites']:
-#        site_list.append({'xid': site['xid'], 'name': site['name']})
     for site in result['sites']:
         site_list[site['xid']] = site['name']
         
