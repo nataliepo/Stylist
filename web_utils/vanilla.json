@@ -1,205 +1,209 @@
 {
-    "#tydget": [
-    {
-        "id": "font-family",
-        "label": "Main Widget Font",
-        "type": "text",
-        "value": "\"Helvetica Neue\", Arial, Verdana",
-        "can_customize": 1,
-        "important": 0
+    "General": {
+        "#tydget": [
+            {
+                "id": "font-family",
+                "label": "Main Widget Font",
+                "type": "text",
+                "value": "\"Helvetica Neue\", Arial, Verdana",
+                "can_customize": 1,
+                "important": 0
+            },
+            {
+                "id": "color",
+                "label": "Default Font Color",
+                "type": "color",
+                "value": "#888",
+                "can_customize": 1,
+                "important": 0
+            },
+            {
+                "id": "width",
+                "label": "Width",
+                "type": "text",
+                "value": "300px",
+                "can_customize": 1,
+                "important": 0
+            },
+            {
+                "id": "font-size",
+                "label": "Font Size",
+                "type": "text",
+                "value": "13px",
+                "can_customize": 0,
+                "important": 0
+            }],
+        "#tydget a": [
+            {
+                "id": "color",
+                "label": "Link Colors",
+                "type": "color",
+                "value": "#666",
+                "can_customize": 1,
+                "important": 0
+            },
+            {
+                "id": "text-decoration",
+                "label": "Link Text Decoration",
+                "type": "text",
+                "value": "none",
+                "can_customize": 0,
+                "important": 0
+            },    
+            {
+                "id": "font-weight",
+                "label": "Link Font Weight",
+                "type": "text",
+                "value": "300",
+                "can_customize": 0,
+                "important": 0
+            }],
+        ".tydget-event" : [
+             {
+                 "id": "overflow",
+                 "value": "hidden",
+                 "type": "text",
+                 "label": "Event Overflow",
+                 "can_customize": 0,
+                 "important": 0
+             },         
+             {
+                 "id": "margin",
+                 "value": "25px 15px",
+                 "type": "text",
+                 "label": "Event Margins",
+                 "can_customize": 0,
+                 "important": 0
+             }],    
+         ".tydget-comment-div" : [
+             {
+                 "id": "float",
+                 "value": "left",
+                 "type": "text",
+                 "label": "Comment section float value",
+                 "can_customize": 0,
+                 "important": 0
+             },         
+             {
+                 "id": "margin",
+                 "value": "3px 5px",
+                 "type": "text",
+                 "label": "Comment section margins",
+                 "can_customize": 0,
+                 "important": 0
+             }],
+         ".tydget-fav-div" : [
+             {
+                 "id": "float",
+                 "value": "left",
+                 "type": "text",
+                 "label": "Favorite section float value",
+                 "can_customize": 0,
+                 "important": 0
+             },         
+             {
+                 "id": "margin",
+                 "value": "3px 5px",
+                 "type": "text",
+                 "label": "Favorite section margins",
+                 "can_customize": 0,
+                 "important": 0
+             }],
+         ".tydget-fav-div a, .tydget-comment-div a": [
+             {
+                 "id": "font-weight",
+                 "value": "bold",
+                 "type": "text",
+                 "label": "Comment and Favorite Font Style",
+                 "can_customize": 0,
+                 "important": 1
+             },         
+             {
+                 "id": "color",
+                 "value": "#aaa",
+                 "type": "color",
+                 "label": "Comment and Favorite Font Color",
+                 "can_customize": 1,
+                 "important": 1
+             }],
+            ".tydget-event_footer_div" : [ 
+            {
+                "id": "float",
+                "value": "right",
+                "type": "text",
+                "label": "Float value",
+                "can_customize": 0,
+                "important": 0
+            }],
+        ".tydget-avatar-wrapper" : [
+             {
+                "id": "float",
+                "value": "left",
+                "type": "text",
+                "label": "Avatar Float value",
+                "can_customize": 0,
+                "important": 0
+            },         
+            {
+                "id": "margin-right",
+                "value": "15px",
+                "type": "text",
+                "label": "Avatar Right Margin",
+                "can_customize": 0,
+                "important": 0
+            }],    
+            ".tydget-thumbnail" : [
+            {
+                "id": "border",
+                "value": "1px solid #ccc",
+                "type": "text",
+                "label": "Thumbnail Border",
+                "can_customize": 0,
+                "important": 0
+            }]
     },
-    {
-        "id": "color",
-        "label": "Default Font Color",
-        "type": "color",
-        "value": "#888",
-        "can_customize": 1,
-        "important": 0
-    },
-    {
-        "id": "width",
-        "label": "Width",
-        "type": "text",
-        "value": "300px",
-        "can_customize": 1,
-        "important": 0
-    },
-    {
-        "id": "font-size",
-        "label": "Font Size",
-        "type": "text",
-        "value": "13px",
-        "can_customize": 0,
-        "important": 0
-    }],
-    "#tydget a": [
-    {
-        "id": "color",
-        "label": "Link Colors",
-        "type": "color",
-        "value": "#666",
-        "can_customize": 1,
-        "important": 0
-    },
-    {
-        "id": "text-decoration",
-        "label": "Link Text Decoration",
-        "type": "text",
-        "value": "none",
-        "can_customize": 0,
-        "important": 0
-    },    
-    {
-        "id": "font-weight",
-        "label": "Link Font Weight",
-        "type": "text",
-        "value": "300",
-        "can_customize": 0,
-        "important": 0
-    }],
-    ".tydget-event_footer_div" : [ 
-    {
-        "id": "float",
-        "value": "right",
-        "type": "text",
-        "label": "Float value",
-        "can_customize": 0,
-        "important": 0
-    }],
-    ".tydget-header-precursor" : [
-    {
-        "id": "font-size",
-        "value": "11px",
-        "type": "text",
-        "label": "Upper Header Font Size",
-        "can_customize": 0,
-        "important": 0
-    },
-    {
-        "id": "font-family",
-        "value": "Garamond",
-        "type": "text",
-        "label": "Upper Header Font",
-        "can_customize": 1,
-        "important": 0
-    } ],
-    ".tydget-header-title" : [
-     {
-         "id": "font-size",
-         "value": "30px",
-         "type": "text",
-         "label": "Header Font Size",
-         "can_customize": 1,
-         "important" : 1
-     },
-     {
-         "id": "font-family",
-         "value": "Garamond",
-         "type": "text",
-         "label": "Header Font",
-         "can_customize": 1,
-         "important": 0
-     },
-     {
-         "id": "color",
-         "value": "#ccc",
-         "type": "color",
-         "label": "Header Font Color",
-         "can_customize": 1,
-         "important": 1
-     } ],
-     ".tydget-avatar-wrapper" : [
-     {
-        "id": "float",
-        "value": "left",
-        "type": "text",
-        "label": "Avatar Float value",
-        "can_customize": 0,
-        "important": 0
-    },         
-    {
-        "id": "margin-right",
-        "value": "15px",
-        "type": "text",
-        "label": "Avatar Right Margin",
-        "can_customize": 0,
-        "important": 0
-    }],    
-    ".tydget-thumbnail" : [
-    {
-        "id": "border",
-        "value": "1px solid #ccc",
-        "type": "text",
-        "label": "Thumbnail Border",
-        "can_customize": 0,
-        "important": 0
-    }],
-    ".tydget-event" : [
-    {
-        "id": "overflow",
-        "value": "hidden",
-        "type": "text",
-        "label": "Event Overflow",
-        "can_customize": 0,
-        "important": 0
-    },         
-    {
-        "id": "margin",
-        "value": "25px 15px",
-        "type": "text",
-        "label": "Event Margins",
-        "can_customize": 0,
-        "important": 0
-    }],    
-    ".tydget-comment-div" : [
-    {
-        "id": "float",
-        "value": "left",
-        "type": "text",
-        "label": "Comment section float value",
-        "can_customize": 0,
-        "important": 0
-    },         
-    {
-        "id": "margin",
-        "value": "3px 5px",
-        "type": "text",
-        "label": "Comment section margins",
-        "can_customize": 0,
-        "important": 0
-    }],
-    ".tydget-fav-div" : [
-    {
-        "id": "float",
-        "value": "left",
-        "type": "text",
-        "label": "Favorite section float value",
-        "can_customize": 0,
-        "important": 0
-    },         
-    {
-        "id": "margin",
-        "value": "3px 5px",
-        "type": "text",
-        "label": "Favorite section margins",
-        "can_customize": 0,
-        "important": 0
-    }],
-    ".tydget-fav-div a, .tydget-comment-div a": [
-    {
-        "id": "font-weight",
-        "value": "bold",
-        "type": "text",
-        "label": "Comment and Favorite Font Style",
-        "can_customize": 0,
-        "important": 1
-    },         
-    {
-        "id": "color",
-        "value": "#aaa",
-        "type": "color",
-        "label": "Comment and Favorite Font Color",
-        "can_customize": 1,
-        "important": 1
-    }]
+    "Header": {
+            ".tydget-header-precursor" : [
+            {
+                "id": "font-size",
+                "value": "11px",
+                "type": "text",
+                "label": "Upper Header Font Size",
+                "can_customize": 0,
+                "important": 0
+            },
+            {
+                "id": "font-family",
+                "value": "Garamond",
+                "type": "text",
+                "label": "Upper Header Font",
+                "can_customize": 1,
+                "important": 0
+            } ],
+            ".tydget-header-title" : [
+             {
+                 "id": "font-size",
+                 "value": "30px",
+                 "type": "text",
+                 "label": "Header Font Size",
+                 "can_customize": 1,
+                 "important" : 1
+             },
+             {
+                 "id": "font-family",
+                 "value": "Garamond",
+                 "type": "text",
+                 "label": "Header Font",
+                 "can_customize": 1,
+                 "important": 0
+             },
+             {
+                 "id": "color",
+                 "value": "#ccc",
+                 "type": "color",
+                 "label": "Header Font Color",
+                 "can_customize": 1,
+                 "important": 1
+             } ]
+    }
 }
