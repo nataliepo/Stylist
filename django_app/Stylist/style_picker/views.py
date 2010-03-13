@@ -47,16 +47,22 @@ def load_styles_from_file():
     
     tydget = [ ] 
 
-    keys = result.keys()
-
-    for key in keys:
+    headings = result.keys()
+    
+    for heading in headings:
+        classes = result[heading]
         
-        # key is an array.
-        class_tuple = result[key]
-        for obj in class_tuple:              
-            tydget.append({'obj': TydgetField(obj, key),
-            'class': key,
-            'can_customize': obj['can_customize']})
+        # classes is a hash of class names.
+        class_keys = classes.keys()
+        
+        for class_key in class_keys:
+            # key is an array.
+            class_tuple = classes[class_key]
+            for obj in class_tuple:              
+                tydget.append({'obj': TydgetField(obj, class_key),
+                'class': class_key,
+                'heading': heading,
+                'can_customize': obj['can_customize']})
  
     return tydget    
     

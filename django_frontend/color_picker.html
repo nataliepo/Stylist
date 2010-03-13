@@ -78,13 +78,11 @@
         <div class="controlset">  
             {% comment %} Sort by the class filter for clarity... {% endcomment %}
             
-            {% regroup field_list by class as fields_by_class %}
-            {% for class in fields_by_class %}    
-                
-                {%comment%}<h3>Class: {{ class.grouper }}</h3>{%endcomment%}
-                
-                {% for field in class.list %}
-                	{% if field.can_customize %}
+            {% regroup field_list by heading as fields_by_heading %}
+                {% for heading in fields_by_heading %}
+                <h3> {{ heading.grouper }} </h3>
+                {% for field in heading.list %}
+                    {% if field.can_customize %}
 					<div class="visible">
     				<label for="{{ field.obj.input_id }}">{{ field.obj.label }}</label>
                     {{ field.obj.quick_render }}
